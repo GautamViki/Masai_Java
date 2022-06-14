@@ -1,0 +1,25 @@
+Access Modifier=>
+    access modifier set scope of a variable ,method or class;
+    1 Public
+    2 Protected
+    3 Private
+    4 Default
+
+    public=> public accessibility from anywhere same package,different package ,same class different class;
+    Protected=>accessable from same package and different package child class;
+    Private=>only same class;
+    Default=>only same package
+
+    IS -A relationship=>
+            If any class have property same as different class but it has some extra property
+            like Bird and  parrot class;
+            Bird is a parent class and parrot is child class
+            all the property of Bird is containing parrot class;
+                So we say that parrot IS-A Bird;
+
+
+    HAS-A relationship=> if any class has a containing different class object ;
+            like a Car HAS-A Engine
+            Car has different property and Engine has Different property;
+            Car is containing Engine that is called HAS-A relationship;
+

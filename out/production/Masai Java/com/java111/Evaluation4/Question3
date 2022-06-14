@@ -1,0 +1,39 @@
+Checked Exc. =>
+All error which is checked at compile time are called checked  Exc.
+All error which is not belong RunTimeException also called checked Exception
+UnChecked Exc. =>
+All RunTimeException is called unchecked Exc.
+
+
+
+Userdefined Exc.
+=================
+public class UserExc extends Exception{
+    public UserExc(String err){
+        super(err);
+    }
+}
+
+public class Main{
+
+public checkAge(int age) throws Exception{
+        if(age>=15){
+        //statement
+    }
+    else{
+        throw new UserExc("mesage");
+    }
+}
+    public static void main(String[] args){
+        try{
+        Main m=new Main();
+        m.checkAge(12);
+        }
+        catch(Exception e)
+        {
+            System.out.printLn(e.getMessage);
+        }
+
+    }
+
+}

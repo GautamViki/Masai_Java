@@ -1,0 +1,20 @@
+Difference between String And StringBuilder;
+String ===>
+    1.   String is immutable;
+    2.  String run time is faster;
+
+StringBuilder ===>
+    1.  StringBuilder is mutable;
+    2.  Run time is slower than String;
+
+
+Method of String Class ====>
+    1. str.substring(index);
+    2. str.trim();
+    3. str.split();
+    4. str.toUpperCase();
+    5. str.indexOf(char);
+    6. str.charAt(index);
+    7. str.toLowerCase();
+
+
