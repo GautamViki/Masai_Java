@@ -1,0 +1,4 @@
+wait()===>wait() causes current thread to wait until another thread invokes the notify()
+ method or the notifyAll() method for this object.
+
+ notify()==>The notify() method wakes up a single thread that is waiting on that object's monitor.
