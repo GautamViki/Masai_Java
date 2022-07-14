@@ -1,0 +1,40 @@
+***********Question 1**********
+create table CITY (
+    -> ID INT,
+    -> NAME VARCHAR(17),
+    -> COUNTRYCODE VARCHAR(3),
+    -> DISTRICT VARCHAR(20),
+    -> POPULATION INT
+    -> );
+
+INSERT INTO CITY VALUES(
+    -> 3878,
+    -> 'SCOTTLAND',
+    -> 'USA',
+    -> 'ARIZONA',
+    -> 202705
+    -> );
+
+INSERT INTO CITY VALUES(
+    -> 3965,
+    -> 'CORONA',
+    -> 'USA',
+    -> 'CALIFORNIA',
+    -> 90000
+    -> );
+
+INSERT INTO CITY VALUES(
+    -> 3973,
+    -> 'CONCORD',
+    -> 'USA',
+    -> 'CALIFORNIA',
+    -> 121780
+    -> );
+
+    Query =>SELECT *FROM CITY WHERE POPULATION>100000;
+======================================================
+***********Question 2**********
+    Query=> SELECT SUM(POPULATION) FROM CITY WHERE DISTRICT='CALIFORNIA';
+
+***********Question 3**********
+    Query=> SELECT ROUND(AVG(POPULATION)) FROM CITY;

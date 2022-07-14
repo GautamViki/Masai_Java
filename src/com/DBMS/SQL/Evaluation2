@@ -1,0 +1,45 @@
+Question1
+Person Table
+create table person
+(personId int primary key, lastName varchar(20), firstName varchar(20) );
+Insert into person values(1,’shah’,’Amit’);
+Insert into person values(2,’dhoni’,’Mahendra’);
+Address Table
+create table address
+(addressId int primary key, personId int, city varchar(20),state varchar(20) );
+Insert into Address values (1,1,’gandhinagar’,’Jammu’);
+Insert into Address values (2,3,’ranchi’,’Jharkhand’);
+Insert into Address values (3,4,’Mumbai’,’Maharashtra’);
+Ans Query--
+ select firstName,lastName,city,state from person left join address on person.personId=address.personId;
+
+Question2
+A transaction is a sequence of operations performed (using one or more SQL statements) on a database as a single logical unit of work.
+ex:
+•	withdrawing money from the ATM
+•	transfering amount from one account to another.
+In order to maintain consistancy in DB , before and after the transaction certain properties should be followd
+these are called ACID properties.
+A: Atomicity : (All or noting rule) the entire transaction takes place at once or does not happens at all.
+C: Consistent: the database must be Consistent before and after transaction
+I: Isoloated: multiple transaction should occurs independently at a time without any interference.
+D: Durability: The changes of a sucessfull transaction should be permanent even if system failure occurs.
+
+Question 3
+Ans Query : - select c.email, count(c.email) from customers c inner join orders o on c.customer_id = o.customer_id and  year(order_placed_date)= 2016 group by c.email order by  count(c.email) desc ;
+
+Question4
+Normalization:-
+Normalization is a process of organizing the data in database to avoid the redundancy (duplication). because of data redundancy there are several problems in the databases.
+Uses=>
+•	It is use to remove anamolies from the database.
+•	It is used to divide large table into small table.
+
+2NF => 2NF applies in a table which is having a composite key, i.e a table with a primary key compound with two or more attribute.
+- a table with a single column primary key is automatically in 2NF.
+-to be in 2nF, a table must be in 1stNF  and the table must not contains any partial dependency.
+Ex-  suppose a table  name as Student and we store rollNo,name,address without using primary key .So we have more chance a rollNo is assigned to more than one students but each student have different different rollNo. So avoiding these type of anamolies we use 2Nf.
+schema before and after the third normal form=>
+If 	X is dependent upon Y and
+Y is dependent upon Z then we say that
+X is dependent upon Z
